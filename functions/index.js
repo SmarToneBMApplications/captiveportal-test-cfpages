@@ -5,5 +5,9 @@ export async function onRequestGet({ request, next }) {
         url.pathname = "/success"
         return Response.redirect(url, 302);
     }
+
+    console.log("splash page");
+    console.log(request);
+
     return next();
 }
